@@ -1,8 +1,13 @@
 import './App.css';
+import Header from './components/Header';
+import MainContent from './components/MainContent';
 
 function App() {
   return (
-    <h1>damon the dev</h1>
+    <div className='App'>
+      <Header />
+      <MainContent />
+    </div>
   );
 }
 
