@@ -1,6 +1,6 @@
-import './App.css';
-import Header from './components/Header';
-import MainContent from './components/MainContent';
+import './styles/shared.css';
+import Header from './components/Header/Header';
+import MainContent from './components/MainContent/MainContent';
 
 function App() {
   return (
