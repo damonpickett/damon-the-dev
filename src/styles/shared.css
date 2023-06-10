@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap');
+/*  font-family: 'Orbitron', sans-serif;  */
+
 html { font-size: 100%; } /* Remember to add to @media screens when necessary */
 h1 { font-size: 2.074em; }
 h2 { font-size: 1.728em; }
@@ -20,6 +23,10 @@ h1 {
 
 p {
   color: #CCD6F6;
+}
+
+li {
+  font-family: 'Orbitron', sans-serif;
 }
 
 .wrapper {
