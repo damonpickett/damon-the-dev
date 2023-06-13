@@ -1,15 +1,9 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { ReactComponent as Logo } from "../../assets/logo-square.svg";
 import { NavLink, useLocation } from "react-router-dom";
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+const Header = (props) => {
 
   const location = useLocation();
   const currentPage = location.pathname;
@@ -23,8 +17,8 @@ const Header = () => {
       </div>
       <div className="nav">
         <div
-          className={isMenuOpen ? "menu-btn open" : "menu-btn"}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className={props.burgerMenu ? "menu-btn open" : "menu-btn"}
+          onClick={() => props.setBurgerMenu(!props.burgerMenu)}
         >
           <div className="menu-btn__burger"></div>
         </div>
@@ -32,7 +26,7 @@ const Header = () => {
         {/* FOR DESKTOP */}
 
         <ul className="menu">
-          <li className={currentPage === "/home" ? "active" : ""}>
+          <li className={currentPage === "/" ? "active" : ""}>
             <NavLink className='navlink' to="/home">Home</NavLink>
           </li>
           <li className={currentPage === "/experience" ? "active" : ""}>

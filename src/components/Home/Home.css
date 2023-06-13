@@ -1,0 +1,28 @@
+.profile-container {
+    max-width: 100%;
+}
+
+.profile-pic {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.site-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.site-subtitle {
+    margin-bottom: 2rem;
+}
+
+.value-prop {
+    margin-bottom: 2rem;
+}
+
+.contact {
+    background-color: #FF00D6;
+    color: #F8FB04;
+    font-weight: 400;
+}

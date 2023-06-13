@@ -1,0 +1,45 @@
+.main-content {
+  position: relative;
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.main-content::before,
+.main-content::after {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    content: "";
+}
+
+.main-content::before {
+    left: 0;
+    top: 0;
+    border-left: 3px solid #04fdff;
+    border-top: 3px solid #04fdff;
+}
+
+.main-content::after {
+    right: 0;
+    bottom: 0;
+    border-right: 3px solid #04fdff;
+    border-bottom: 3px solid #04fdff;
+}
+
+.credits {
+    /* text-align: center; */
+    margin-bottom: 3rem;
+}
+
+.credits a {
+  color: #04fdff;
+  text-decoration: none;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
