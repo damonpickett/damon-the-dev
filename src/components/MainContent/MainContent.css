@@ -1,36 +1,35 @@
 .main-content {
   position: relative;
-  padding: 2rem;
-  margin-top: 3rem;
+  padding: 3rem;
   text-align: center;
-  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin: 3rem auto;
 }
 
 .main-content::before,
 .main-content::after {
-    position: absolute;
-    width: 10rem;
-    height: 10rem;
-    content: "";
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  content: "";
 }
 
 .main-content::before {
-    left: 0;
-    top: 0;
-    border-left: 3px solid #04fdff;
-    border-top: 3px solid #04fdff;
+  left: 0;
+  top: 0;
+  border-left: 3px solid #04fdff;
+  border-top: 3px solid #04fdff;
 }
 
 .main-content::after {
-    right: 0;
-    bottom: 0;
-    border-right: 3px solid #04fdff;
-    border-bottom: 3px solid #04fdff;
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid #04fdff;
+  border-bottom: 3px solid #04fdff;
 }
 
 .credits {
-    /* text-align: center; */
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .credits a {
@@ -39,7 +38,31 @@
 }
 
 .social {
-    display: flex;
-    justify-content: center;
-    column-gap: 2rem;
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+@media (min-width: 1100px) {
+  .footer-content {
+    position: relative;
+  }
+
+  .credits {
+    display: inline-block;
+    
+    margin: 0 auto;
+  }
+
+  .social {
+    display: inline-block;
+    margin-left: auto;
+    position: absolute;
+    right: 0;
+  }
+
+  .first, .second {
+    margin-right: 2rem;
+  }
+
 }
