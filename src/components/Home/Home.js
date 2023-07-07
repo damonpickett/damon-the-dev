@@ -5,7 +5,7 @@ import PythonLogo from "../../assets/Desktop/Tablet/python.png";
 import AILogo from "../../assets/Desktop/Tablet/ai.png";
 import FigmaLogo from "../../assets/Desktop/Tablet/figma.png";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div className="home">
       <div className="hero">
@@ -25,7 +25,12 @@ const Home = () => {
               solutions with a front-end and AI specialist.
             </p>
           </div>
-          <button className="contact">Get in touch</button>
+          <button
+            className="contact"
+            onClick={() => props.setContactModal(true)}
+          >
+            Get in touch
+          </button>
         </div>
       </div>
       <div className="tech-stack">

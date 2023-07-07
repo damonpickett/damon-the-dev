@@ -59,10 +59,17 @@
     margin-left: auto;
     position: absolute;
     right: 0;
+    width: 15rem;
+    height: 4rem
   }
 
   .first, .second {
     margin-right: 2rem;
+  }
+
+  .link {
+    position: relative;
+    z-index: 1;
   }
 
 }

@@ -51,6 +51,10 @@
         order: 1;
     }
 
+    .site-title, .site-subtitle, .value-prop {
+        text-align: left;
+    }
+
     .profile-container {
         order: 2;
     }
