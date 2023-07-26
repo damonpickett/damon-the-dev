@@ -1,9 +1,11 @@
 .hide {
   display: none;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .show {
   display: block;
+  opacity: 1;
 }
 
 #contact-modal {
@@ -17,42 +19,59 @@
   align-items: center;
   justify-content: center;
   z-index: 100;
-  transition-duration: 4s;
 }
 
 .contact-form {
     background-color: #FF00D6;
+    box-shadow: 0 0 10px 4px rgb(247, 245, 245);
 }
 
 .title {
     padding: 1.5rem;
     border-bottom:#F8FB04 solid 2px;
     margin-bottom: 1.2rem;
+    position: relative;
 }
 
-input, textarea {
+.close-button {
+    background-color: transparent;
+    border: 2px solid #F8FB04;
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    position: absolute;
+    right: 0.8rem;
+    top: 1.0rem;
+  }
+  
+  .close-icon {
+    font-size: 24px;
+    line-height: 1;
+    color: #F8FB04;
+  }  
+
+.body input, .body textarea {
     display: block;
     margin: 0 auto 1rem;
     padding: 0.5rem;
     border: none;
 }
 
-textarea {
+.body textarea {
     width: 20rem;
     height: 15rem;
 }
 
-button {
+.body button {
     display: block;
     margin: 0 auto 1rem;
     color: #FF00D6;
     background-color: #F8FB04;
 }
 
-p {
+.body p {
     padding: 2rem;
 }
 
-a {
+.body a {
     color: #04fdff
 }

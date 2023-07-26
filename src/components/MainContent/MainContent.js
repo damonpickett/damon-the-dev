@@ -12,7 +12,6 @@ import ContactModal from "../ContactModal/ContactModal";
 
 function MainContent() {
   const [contactModal, setContactModal] = useState(false);
-  console.log(contactModal)
 
   return (
     <div className="main-content">

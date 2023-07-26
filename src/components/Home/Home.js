@@ -26,7 +26,7 @@ const Home = (props) => {
             </p>
           </div>
           <button
-            className="contact"
+            className="clipped contact"
             onClick={() => props.setContactModal(true)}
           >
             Get in touch

@@ -6,10 +6,13 @@ const ContactModal = (props) => {
   }
 
   return (
-    <div id="contact-modal" onClick={() => props.setContactModal(false)}>
+    <div id="contact-modal">
       <div className="contact-form">
         <div className="title">
           <h2>Contact</h2>
+          <button className="close-button" onClick={() => props.setContactModal(false)}>
+            <span className="close-icon">&times;</span>
+          </button>
         </div>
         <div className="body">
           <form
@@ -25,11 +28,11 @@ const ContactModal = (props) => {
               required
             />
             <input type="text" name="telephone" placeholder="Your phone #" />
-            <input
+            {/* <input
               type="hidden"
               name="_next"
               value="https://damonpickett.github.io/damonpickett/thankyou.html"
-            />
+            /> */}
             <input
               type="hidden"
               name="_subject"
@@ -40,9 +43,7 @@ const ContactModal = (props) => {
               rows="5"
               placeholder="How can I help you?"
             ></textarea>
-            <button type="submit">
-              Send
-            </button>
+            <button className='clipped' type="submit">Send</button>
             <p>
               Please feel free to connect with me on{" "}
               <a

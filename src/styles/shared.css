@@ -57,7 +57,7 @@ li {
   margin: 0 auto;
 }
 
-button {
+.clipped {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.4rem;
   padding: 0.8rem 1.4rem;
