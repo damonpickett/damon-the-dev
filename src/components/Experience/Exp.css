@@ -5,26 +5,16 @@
   padding-right: 1.5rem;
 }
 
-.exp-main p {
-  padding-bottom: 1.5rem;
-}
-
-.exp-main h2 {
-  padding-bottom: 1.5rem;
-}
-
 .exp-main button {
   background: #FF00D6;
   color: #F8FB04;
+  margin-bottom: 4rem;
 }
 
 .exp-nav {
   text-align: left;
   padding: 0 1rem 1rem 1.5rem;
-}
-
-.exp-nav h1 {
-  padding-bottom: 1.5rem;
+  margin-bottom: 4rem;
 }
 
 .exp-ul {

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import "./Exp.css";
 import experienceContent from "./experienceContent.json"; // Import the JSON content
-import selectedBullet from "../../assets/right-pointing-tri-selected.svg";
-import nonSelectedBullet from "../../assets/right-pointing-tri-unselected.svg";
 
-const Experience = () => {
+const Experience = (props) => {
   // State to track the selected menu item
   const [selectedMenuItem, setSelectedMenuItem] = useState(
     "software-development"
@@ -27,7 +25,9 @@ const Experience = () => {
         {experienceContent[selectedMenuItem].content.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
-        <button className="clipped">Get in Touch</button>
+        <button className="clipped" onClick={() => props.setContactModal(true)}>
+          Get in Touch
+        </button>
       </div>
       <div className="exp-nav">
         {/* Your content for the navigation section goes here */}
