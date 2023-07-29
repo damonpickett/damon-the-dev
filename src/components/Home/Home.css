@@ -10,7 +10,6 @@
 
 .site-title {
   font-size: 1.6rem;
-  margin-bottom: 2rem;
 }
 
 .site-subtitle {
@@ -21,12 +20,6 @@
   margin: 0 auto 2rem;
   max-width: 500px;
   font-size: 1.1rem;
-}
-
-.contact {
-  background-color: #ff00d6;
-  color: #f8fb04;
-  font-weight: 400;
 }
 
 .tech-stack {

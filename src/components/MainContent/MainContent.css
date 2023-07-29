@@ -36,11 +36,6 @@
   padding-bottom: 0;
 }
 
-.credits a {
-  color: #04fdff;
-  text-decoration: none;
-}
-
 .social {
   display: flex;
   justify-content: center;

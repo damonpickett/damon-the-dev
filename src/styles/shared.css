@@ -38,6 +38,22 @@ h1, h3 {
   padding-bottom: 1.5rem;
 }
 
+h1 {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #ff00ff;
+  }
+  50% {
+    text-shadow: 0 0 50px #ff00ff;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff00ff;
+  }
+}
+
 h2, h4 {
   color: #F8FB04;
   font-family: 'Orbitron', sans-serif;
@@ -51,8 +67,47 @@ p {
   padding-bottom: 1.5rem;
 }
 
+a {
+  text-decoration: none;
+  color: #04FDFF;
+}
+
 li {
   font-family: 'Orbitron', sans-serif;
+}
+
+button {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.545), transparent);
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 100%;
+  }
+}
+
+button:hover {
+  transform: scale(1.1); /* Increase size on hover */
+  background-color: #03fe03;
+}
+
+.contact {
+  background: #FF00D6;
+  color: #F8FB04;
 }
 
 .wrapper {

@@ -34,15 +34,14 @@ function MainContent() {
             />
           }
         />
-        <Route path="/about" element={<About />} />
+        <Route
+          path="/about"
+          element={<About setContactModal={setContactModal} />}
+        />
         <Route path="/projects" element={<Projects />} />
         <Route
           path="/experience"
-          element={
-            <Experience
-              setContactModal={setContactModal}
-            />
-          }
+          element={<Experience setContactModal={setContactModal} />}
         />
       </Routes>
       <ContactModal

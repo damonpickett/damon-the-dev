@@ -12,10 +12,20 @@
   padding-bottom: 1.5rem;
 }
 
-.projects-main button {
+.stack {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.tech {
+  color: #FF00D6;
+}
+
+.view {
   margin-right: 2rem;
   background-color: #f8fb04;
   color: #FF00D6;
+  min-width: 12rem;
 }
 
 .projects-nav {

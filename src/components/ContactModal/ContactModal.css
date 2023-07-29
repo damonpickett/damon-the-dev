@@ -24,6 +24,16 @@
 .contact-form {
     background-color: #FF00D6;
     box-shadow: 0 0 10px 4px rgb(247, 245, 245);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .title {
@@ -33,27 +43,49 @@
     position: relative;
 }
 
+.title h2 {
+  padding: 0;
+}
+
 .close-button {
-    background-color: transparent;
-    border: 2px solid #F8FB04;
-    cursor: pointer;
-    padding: 0.5rem 0.8rem;
-    position: absolute;
-    right: 0.8rem;
-    top: 1.0rem;
-  }
-  
-  .close-icon {
-    font-size: 24px;
-    line-height: 1;
-    color: #F8FB04;
-  }  
+  position: absolute;
+  top: 1.6rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close-button::before,
+.close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #F8FB04;
+}
+
+.close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close-button:hover {
+  transform: scale(1.5);
+}
 
 .body input, .body textarea {
     display: block;
     margin: 0 auto 1rem;
     padding: 0.5rem;
     border: none;
+    font-size: 1rem;
 }
 
 .body textarea {
@@ -61,7 +93,7 @@
     height: 15rem;
 }
 
-.body button {
+.send {
     display: block;
     margin: 0 auto 1rem;
     color: #FF00D6;

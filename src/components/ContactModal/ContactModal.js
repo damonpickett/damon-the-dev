@@ -10,24 +10,23 @@ const ContactModal = (props) => {
       <div className="contact-form">
         <div className="title">
           <h2>Contact</h2>
-          <button className="close-button" onClick={() => props.setContactModal(false)}>
-            <span className="close-icon">&times;</span>
-          </button>
+          <div className="close-button" onClick={() => props.setContactModal(false)}></div>
         </div>
         <div className="body">
           <form
             action="https://formsubmit.co/damon.pickett@gmail.com"
             method="POST"
           >
-            <input type="text" name="name" placeholder="Your name" />
-            <input type="text" name="company" placeholder="Your company" />
+            <input className='clipped'type="text" name="name" placeholder="Your name" />
+            <input className='clipped' type="text" name="company" placeholder="Your company" />
             <input
+            className='clipped'
               type="email"
               name="email"
               placeholder="Your email address"
               required
             />
-            <input type="text" name="telephone" placeholder="Your phone #" />
+            <input className='clipped' type="text" name="telephone" placeholder="Your phone #" />
             {/* <input
               type="hidden"
               name="_next"
@@ -39,11 +38,12 @@ const ContactModal = (props) => {
               value="New enquiry from portfolio site"
             />
             <textarea
+            className='clipped'
               name="message"
               rows="5"
               placeholder="How can I help you?"
             ></textarea>
-            <button className='clipped' type="submit">Send</button>
+            <button className='clipped send' type="submit">Send</button>
             <p>
               Please feel free to connect with me on{" "}
               <a

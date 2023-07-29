@@ -17,13 +17,16 @@ const Projects = () => {
           <p key={index}>{p}</p>
         ))}
         ;
+        {projects[selectedMenuItem].stack === "" ? null : (
+          <p><span className="stack">Stack</span>: <span className="tech">{projects[selectedMenuItem].stack}</span></p>
+        )}
         {projects[selectedMenuItem].code === "" ? null : (
           <a
             href={projects[selectedMenuItem].code}
             target="_blank"
             rel="noreferrer"
           >
-            <button className="clipped">View Code</button>
+            <button className="clipped view">View Code</button>
           </a>
         )}
         {projects[selectedMenuItem].site === "" ? null : (
@@ -32,7 +35,7 @@ const Projects = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <button className="clipped">View Site</button>
+            <button className="clipped view">View Site</button>
           </a>
         )}
       </div>

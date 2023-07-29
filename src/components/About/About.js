@@ -1,34 +1,46 @@
 import "./About.css";
 
-const About = () => {
+const About = (props) => {
   return (
     <div className="about">
       <h2>About</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin
-        diam ac lectus consequat, non consectetur odio sollicitudin.
-        Pellentesque vel accumsan nunc. Aenean convallis ut enim id posuere.
-        Quisque ultrices, dolor at dignissim dapibus, ante tortor maximus risus,
-        et blandit elit justo placerat urna. Vestibulum diam ipsum, finibus eu
-        pulvinar sed, dictum non tortor. Suspendisse pretium venenatis nunc ut
-        lacinia. Fusce viverra tellus non dui suscipit finibus. Integer sit amet
-        dolor aliquam libero consequat lobortis. Pellentesque pulvinar quam non
-        nibh tristique rhoncus. Nulla eu mauris magna. Aenean aliquam mi risus,
-        ut vestibulum turpis tincidunt ut. Cras dui tortor, accumsan vel euismod
-        at, vulputate vel nisi. Maecenas efficitur tellus mattis maximus
-        pharetra.
+        Hi, I’m Damon Pickett and I build AI-powered apps. In 2019 I was working
+        as a Quality Assurance Lead in a call centre. I tasked myself with
+        building data visualizations in Excel to represent the level of customer
+        service that our department was achieving. During this process I often
+        found myself losing track of time and working past the end of my shift
+        without knowing it. I decided that that was the way I wanted work to
+        feel and 2 years later I signed up for General Assembly’s Software
+        Engineering Immersive.
       </p>
       <p>
-        Pellentesque vitae tincidunt sem. Morbi vel felis vitae leo dapibus
-        cursus eget at libero. Duis bibendum accumsan dictum. Cras et leo nunc.
-        Praesent luctus, metus volutpat aliquam vehicula, nunc dolor vestibulum
-        nisl, id cursus felis risus eget tellus. Phasellus in quam felis. Sed
-        vitae enim ut tellus consequat ultricies. Sed pellentesque, lectus sit
-        amet vulputate consequat, nisi nisl dapibus ex, at porta arcu odio eu
-        mi. Vestibulum vitae ex facilisis, fringilla nisi ut, fermentum elit. In
-        eget elit at magna molestie luctus. Fusce vitae lorem porttitor,
-        vulputate enim vitae.
+        Since then I’ve built an{" "}
+        <a
+          href="https://github.com/damonpickett/buge"
+          target="_blank"
+          rel="noreferrer"
+        >
+          AI-powered debugging tool
+        </a>
+        , a{" "}
+        <a href="https://github.com/damonpickett/macta" target="_blank" rel="noreferrer">
+          command-line application
+        </a>{" "}
+        which uses AI to help you find terminal commands, a{" "}
+        <a href="https://blackbrooklodge.ca/" target="_blank" rel="noreferrer">website for local events centre</a>, and more.
       </p>
+      <p>
+        I’m currently learning how to use <a href='https://autogpt.net/' target='_blank' rel='noreferrer'>AutoGPT</a> to do market research before I
+        launch my next app. In the meantime, who are you? What are you up to? Is
+        there anything I might be able to help you with?
+      </p>
+      <button
+            className="clipped contact"
+            onClick={() => props.setContactModal(true)}
+          >
+            Get in touch
+          </button>
     </div>
   );
 };

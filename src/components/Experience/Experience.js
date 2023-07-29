@@ -23,9 +23,10 @@ const Experience = (props) => {
         {/* Display the selected content based on the selectedMenuItem */}
         <h2>{experienceContent[selectedMenuItem].title}</h2>
         {experienceContent[selectedMenuItem].content.map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
+          // <p key={index}>{paragraph}</p>
+          <p key={index} dangerouslySetInnerHTML={{__html: paragraph}}/>
         ))}
-        <button className="clipped" onClick={() => props.setContactModal(true)}>
+        <button className="clipped contact" onClick={() => props.setContactModal(true)}>
           Get in Touch
         </button>
       </div>
