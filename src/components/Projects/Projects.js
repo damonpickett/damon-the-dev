@@ -1,17 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Projects.css";
 import { projects } from "./projectsContent.js";
 
 const Projects = () => {
   const [selectedMenuItem, setSelectedMenuItem] = useState(0);
 
+  const [showSlideIn, setShowSlideIn] = useState(false);
+
   const handleMenuItemClick = (menuItem, index) => {
     setSelectedMenuItem(menuItem);
+    setShowSlideIn(true);
   };
 
+  useEffect(() => {
+    if (showSlideIn) {
+      const timeout = setTimeout(() => {
+        setShowSlideIn(false);
+      }, 500); // Replace 500 with the duration of your slide-in animation in milliseconds
+      return () => clearTimeout(timeout);
+    }
+  }, [showSlideIn]);
+  
+
   return (
-    <div className="projects">
-      <div className="projects-main">
+    <div className="projects fade-in">
+      <div className={`projects-main ${showSlideIn ? "slide-in" : ""}`}>
         <h2>{projects[selectedMenuItem].title}</h2>
         {projects[selectedMenuItem].description.map((p, index) => (
           <p key={index}>{p}</p>

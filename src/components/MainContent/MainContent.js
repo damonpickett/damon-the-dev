@@ -15,6 +15,7 @@ function MainContent() {
 
   return (
     <div className="main-content">
+      <div className="routes-container">
       <Routes>
         <Route
           path="/"
@@ -44,6 +45,7 @@ function MainContent() {
           element={<Experience setContactModal={setContactModal} />}
         />
       </Routes>
+      </div>
       <ContactModal
         contactModal={contactModal}
         setContactModal={setContactModal}
@@ -53,6 +55,7 @@ function MainContent() {
           <p>
             Designed and{" "}
             <a
+              className="content-link"
               href="https://github.com/damonpickett/damon-the-dev"
               rel="noreferrer"
               target="_blank"
@@ -63,7 +66,12 @@ function MainContent() {
           </p>
           <p>
             Icons by{" "}
-            <a href="https://icons8.com/" rel="noreferrer" target="_blank">
+            <a
+              className="content-link"
+              href="https://icons8.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
               Icons8
             </a>
           </p>
@@ -75,7 +83,7 @@ function MainContent() {
             target="_blank"
             className="first link"
           >
-            <img src={twitter} alt="twitter" />
+            <img src={twitter} alt="twitter" className="social-icon" />
           </a>
           <a
             href="https://github.com/damonpickett"
@@ -83,7 +91,7 @@ function MainContent() {
             target="_blank"
             className="second link"
           >
-            <img src={github} alt="github" />
+            <img src={github} alt="github" className="social-icon" />
           </a>
           <a
             href="https://www.linkedin.com/in/damon-pickett/"
@@ -91,7 +99,7 @@ function MainContent() {
             target="_blank"
             className="link"
           >
-            <img src={linkedin} alt="linkedin" />
+            <img src={linkedin} alt="linkedin" className="social-icon" />
           </a>
         </div>
       </div>

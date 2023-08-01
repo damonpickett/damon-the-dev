@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Exp.css";
 import experienceContent from "./experienceContent.json"; // Import the JSON content
 
@@ -11,19 +11,30 @@ const Experience = (props) => {
   // State to track triangle bullet points
   const [selectedTri, setSelectedTri] = useState(1);
 
+  const [showSlideIn, setShowSlideIn] = useState(false);
+
   // Function to handle menu item click and update selectedMenuItem state
   const handleMenuItemClick = (menuItem, index) => {
     setSelectedMenuItem(menuItem);
     setSelectedTri(index);
+    setShowSlideIn(true);
   };
 
+  useEffect(() => {
+    if (showSlideIn) {
+      const timeout = setTimeout(() => {
+        setShowSlideIn(false);
+      }, 500); // Replace 500 with the duration of your slide-in animation in milliseconds
+      return () => clearTimeout(timeout);
+    }
+  }, [showSlideIn]);
+  
+
   return (
-    <div className="experience">
-      <div className="exp-main">
-        {/* Display the selected content based on the selectedMenuItem */}
+    <div className="experience fade-in">
+      <div className={`exp-main ${showSlideIn ? "slide-in" : ""}`}>
         <h2>{experienceContent[selectedMenuItem].title}</h2>
         {experienceContent[selectedMenuItem].content.map((paragraph, index) => (
-          // <p key={index}>{paragraph}</p>
           <p key={index} dangerouslySetInnerHTML={{__html: paragraph}}/>
         ))}
         <button className="clipped contact" onClick={() => props.setContactModal(true)}>
@@ -31,7 +42,6 @@ const Experience = (props) => {
         </button>
       </div>
       <div className="exp-nav">
-        {/* Your content for the navigation section goes here */}
         <h1>Experience</h1>
         <ul className="exp-ul">
           <li

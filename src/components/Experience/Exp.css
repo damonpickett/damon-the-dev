@@ -51,6 +51,23 @@
   background: url('../../assets/right-pointing-tri-selected.svg') no-repeat center;
 }
 
+#glowing-svg {
+  animation: glowing 1.5s ease-in-out infinite;
+}
+
+@keyframes glowing {
+  0% {
+    filter: drop-shadow(0 0 5px #04fdff);
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #04fdff);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #04fdff);
+  }
+}
+
+
 .exp-ul li::before {
   content: '';
   position: absolute;

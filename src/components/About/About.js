@@ -2,7 +2,7 @@ import "./About.css";
 
 const About = (props) => {
   return (
-    <div className="about">
+    <div className="about fade-in">
       <h2>About</h2>
       <p>
         Hi, I’m Damon Pickett and I build AI-powered apps. In 2019 I was working
@@ -17,6 +17,7 @@ const About = (props) => {
       <p>
         Since then I’ve built an{" "}
         <a
+          className="content-link"
           href="https://github.com/damonpickett/buge"
           target="_blank"
           rel="noreferrer"
@@ -24,23 +25,45 @@ const About = (props) => {
           AI-powered debugging tool
         </a>
         , a{" "}
-        <a href="https://github.com/damonpickett/macta" target="_blank" rel="noreferrer">
+        <a
+          className="content-link"
+          href="https://github.com/damonpickett/macta"
+          target="_blank"
+          rel="noreferrer"
+        >
           command-line application
         </a>{" "}
         which uses AI to help you find terminal commands, a{" "}
-        <a href="https://blackbrooklodge.ca/" target="_blank" rel="noreferrer">website for local events centre</a>, and more.
+        <a
+          className="content-link"
+          href="https://blackbrooklodge.ca/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          website for local events centre
+        </a>
+        , and more.
       </p>
       <p>
-        I’m currently learning how to use <a href='https://autogpt.net/' target='_blank' rel='noreferrer'>AutoGPT</a> to do market research before I
-        launch my next app. In the meantime, who are you? What are you up to? Is
-        there anything I might be able to help you with?
+        I’m currently learning how to use{" "}
+        <a
+          className="content-link"
+          href="https://autogpt.net/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          AutoGPT
+        </a>{" "}
+        to do market research before I launch my next app. In the meantime, who
+        are you? What are you up to? Is there anything I might be able to help
+        you with?
       </p>
       <button
-            className="clipped contact"
-            onClick={() => props.setContactModal(true)}
-          >
-            Get in touch
-          </button>
+        className="clipped contact"
+        onClick={() => props.setContactModal(true)}
+      >
+        Get in touch
+      </button>
     </div>
   );
 };

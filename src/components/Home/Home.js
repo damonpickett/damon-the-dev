@@ -7,7 +7,7 @@ import FigmaLogo from "../../assets/Desktop/Tablet/figma.png";
 
 const Home = (props) => {
   return (
-    <div className="home">
+    <div className="home fade-in">
       <div className="hero">
         <div className="profile-container">
           <img src={profilePic} className="profile-pic" alt="Damon Pickett" />

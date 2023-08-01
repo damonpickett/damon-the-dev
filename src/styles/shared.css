@@ -72,6 +72,14 @@ a {
   color: #04FDFF;
 }
 
+.content-link {
+  transition: color 0.3s;
+}
+
+.content-link:hover {
+  color: #F8FB04;
+}
+
 li {
   font-family: 'Orbitron', sans-serif;
 }
@@ -126,6 +134,34 @@ button:hover {
 
 input, textarea {
   font-family: 'SF Mono', sans-serif;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideInFromLeft 0.5s ease forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 
