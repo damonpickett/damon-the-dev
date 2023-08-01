@@ -8,7 +8,7 @@ The Damon The Dev site was built to showcase my work as a software developer who
 
 ## Demo
 
-[Provide a link to a live demo of your portfolio website if available.]
+![demo](./src/assets/damon-the-dev-demo-edited.gif)
 
 ## Technologies Used
 

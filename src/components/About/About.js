@@ -11,7 +11,7 @@ const About = (props) => {
         service that our department was achieving. During this process I often
         found myself losing track of time and working past the end of my shift
         without knowing it. I decided that that was the way I wanted work to
-        feel and 2 years later I signed up for General Assembly’s Software
+        feel and two years later I signed up for General Assembly’s Software
         Engineering Immersive.
       </p>
       <p>
@@ -40,7 +40,7 @@ const About = (props) => {
           target="_blank"
           rel="noreferrer"
         >
-          website for local events centre
+          website for a local events centre
         </a>
         , and more.
       </p>
