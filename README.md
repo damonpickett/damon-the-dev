@@ -107,8 +107,6 @@ MIT
 
 ## Contact/Social
 
-[Linkedin](https://www.linkedin.com/in/damon-pickett/)
-
-[twitter](https://twitter.com/home)
-
-[Email]() - Go to my site, click 'Get in Touch' button, and use contact form :)
+* [Linkedin](https://www.linkedin.com/in/damon-pickett/)
+* [twitter](https://twitter.com/home)
+* [Email]() - Go to my site, click 'Get in Touch' button, and use contact form :)
