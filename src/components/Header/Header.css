@@ -1,0 +1,144 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 6rem;
+  height: 6rem;
+}
+
+.nav {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+}
+
+.menu-btn {
+  transition: all 0.5s ease-in-out;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-btn__burger {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #04fdff;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #04fdff;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+@media (min-width: 1000px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-evenly;
+    color: #04fdff;
+    list-style-type: none;
+    min-width: 44rem;
+    column-gap: 1.2rem;
+  }
+
+  .menu li {
+    position: relative;
+    font-size: 1.3rem;
+    width: 12rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu li.active::before,
+  .menu li.active::after {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    content: "";
+    
+  }
+
+  .menu li.active::before {
+    left: 0;
+    top: 0;
+    border-left: 2px solid #04fdff;
+    border-top: 2px solid #04fdff;
+  }
+
+  .menu li.active::after {
+    right: 0;
+    bottom: 0;
+    border-right: 2px solid #04fdff;
+    border-bottom: 2px solid #04fdff;
+  }
+
+  .menu li::before,
+  .menu li::after {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    content: "";
+    
+  }
+
+  .menu li:hover::before {
+    left: 0;
+    top: 0;
+    border-left: 2px solid #04fdff;
+    border-top: 2px solid #04fdff;
+  }
+
+  .menu li:hover::after {
+    right: 0;
+    bottom: 0;
+    border-right: 2px solid #04fdff;
+    border-bottom: 2px solid #04fdff;
+  }
+
+  .navlink {
+    color: inherit;
+    text-decoration: none;
+  }
+}

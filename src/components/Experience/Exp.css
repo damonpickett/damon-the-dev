@@ -1,0 +1,97 @@
+/* MOBILE/TABLET */
+
+.exp-main {
+  text-align: left;
+  padding-right: 1.5rem;
+}
+
+.exp-main .contact {
+  margin-bottom: 4rem;
+}
+
+.exp-nav {
+  text-align: left;
+  padding: 0 1rem 1rem 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.exp-ul {
+  position: relative;
+  list-style: none;
+  padding: 1rem 1rem 1rem 1.5rem;
+}
+
+.exp-ul::before {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  content: "";
+  left: 0;
+  top: 0;
+  border-left: 2px solid #04fdff;
+  border-top: 2px solid #04fdff;
+}
+
+.exp-ul li {
+  margin-bottom: 1.3rem;
+  color: #F8FB04;
+  cursor: pointer;
+  position: relative;
+  padding-left: 0.8rem; /* Adjust the padding to align the text with the bullet */
+}
+
+.exp-ul li.selected::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background: url('../../assets/right-pointing-tri-selected.svg') no-repeat center;
+}
+
+#glowing-svg {
+  animation: glowing 1.5s ease-in-out infinite;
+}
+
+@keyframes glowing {
+  0% {
+    filter: drop-shadow(0 0 5px #04fdff);
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #04fdff);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #04fdff);
+  }
+}
+
+
+.exp-ul li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background: url('../../assets/right-pointing-tri-unselected.svg') no-repeat center;
+}
+
+/* DESKTOP */
+@media (min-width: 1100px) {
+.experience {
+    display: flex; /* Use flexbox to create a row layout */
+  }
+  
+  .exp-main {
+    flex: 1; /* Use flex-grow to allow this div to grow and fill available space */
+  }
+  
+  .exp-nav {
+    flex-basis: 300px; /* Set a fixed width for the navigation div */
+  }
+  
+}
+  

@@ -1,0 +1,109 @@
+.hide {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
+
+#contact-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.contact-form {
+    background-color: #FF00D6;
+    box-shadow: 0 0 10px 4px rgb(247, 245, 245);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.title {
+    padding: 1.5rem;
+    border-bottom:#F8FB04 solid 2px;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.title h2 {
+  padding: 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 1.6rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close-button::before,
+.close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #F8FB04;
+}
+
+.close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close-button:hover {
+  transform: scale(1.5);
+}
+
+.body input, .body textarea {
+    display: block;
+    margin: 0 auto 1rem;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+}
+
+.body textarea {
+    width: 20rem;
+    height: 15rem;
+}
+
+.send {
+    display: block;
+    margin: 0 auto 1rem;
+    color: #FF00D6;
+    background-color: #F8FB04;
+}
+
+.body p {
+    padding: 2rem;
+}
+
+.body a {
+    color: #04fdff
+}
