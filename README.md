@@ -4,7 +4,7 @@
 
 The Damon The Dev site was built to showcase my work as a software developer. It was designed in Figma and built with React.
 
-[Live Site]()
+[Live Site](https://damon-the-dev.vercel.app/)
 
 ## Demo
 
@@ -109,4 +109,4 @@ MIT
 
 * [Linkedin](https://www.linkedin.com/in/damon-pickett/)
 * [twitter](https://twitter.com/home)
-* [Email]() - Go to my site, click 'Get in Touch' button, and use contact form :)
+* [Email](https://damon-the-dev.vercel.app/) - Go to my site, click 'Get in Touch' button, and use contact form :)
