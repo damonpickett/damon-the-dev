@@ -15,22 +15,22 @@ const BurgerMenu = (props) => {
     <div id="burger-canvas" className={visibility}>
         <ul className="burger-menu">
           <li className={currentPage === "/home" ? "active" : ""}>
-            <NavLink className="burger-link" to="/home">
+            <NavLink onClick={() => props.setBurgerMenu(false)} className="burger-link" to="/home">
               Home
             </NavLink>
           </li>
           <li className={currentPage === "/experience" ? "active" : ""}>
-            <NavLink className="burger-link" to="/experience">
+            <NavLink onClick={() => props.setBurgerMenu(false)} className="burger-link" to="/experience">
               Experience
             </NavLink>
           </li>
           <li className={currentPage === "/projects" ? "active" : ""}>
-            <NavLink className="burger-link" to="/projects">
+            <NavLink onClick={() => props.setBurgerMenu(false)} className="burger-link" to="/projects">
               Projects
             </NavLink>
           </li>
           <li className={currentPage === "/about" ? "active" : ""}>
-            <NavLink className="burger-link" to="/about">
+            <NavLink onClick={() => props.setBurgerMenu(false)} className="burger-link" to="/about">
               About
             </NavLink>
           </li>
